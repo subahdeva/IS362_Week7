@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[342]:
+# In[352]:
 
 
 import numpy as np
@@ -42,11 +42,17 @@ movie_4_avg = df.iloc[0:5, 5].sum(axis=0) / (len(cols))
 #df.info()
 
 #Append new columns with total averages for user and movie
-df['Average Rating for User'] = [user_0_avg,user_1_avg,user_2_avg,user_3_avg,user_4_avg,'','','']
-df['Average Rating for Movie'] = [movie_0_avg,movie_1_avg,movie_2_avg, movie_3_avg, movie_4_avg,'','','']
+df['Average Rating for User'] = [user_0_avg,user_1_avg,user_2_avg,user_3_avg,user_4_avg,'']
+df['Average Rating for Movie'] = [movie_0_avg,movie_1_avg,movie_2_avg, movie_3_avg, movie_4_avg,'']
 
 
 df.head()
+
+
+# what might be advantages and disadvantages of using normalized ratings instead of the actual ratings:
+# The advantages are you can see what the user normally rates for what genre of movies, using a user's pattern of rating
+# can predict what movies they will watch in the future. This can be useful for streaming websites or services to track.
+# The disadvantages of using normalized ratings is you can't account for the outliers that you get in actual or raw data.
 
 
 # In[ ]:
